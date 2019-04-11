@@ -46,7 +46,7 @@
 .login-box-right{width:270px;height:100%;float:right;position:relative;width:270px;height:100%;padding:0 40px;}
 .login-box-left>img{width:100%;height:100%;}
 .login-box-left:after{content:"";display:block;position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(0,84,230,.7);}
-p.p1{margin:50px 0 10px;border-bottom:1px solid #aaa;}
+p.p1{margin:50px 0 10px;border-bottom:1px solid #aaa; white-space: nowrap;}
 p.p2{margin:40px 0 20px;text-align:left;}
 input{border:none!important;outline:none;}
 button{width:190px;height:40px;line-height:38px;text-align:center;margin:0px auto;background:#3685F2;border-radius:20px;overflow:hidden;border:none;outline:none;font-size:16px;color:#fff;}
