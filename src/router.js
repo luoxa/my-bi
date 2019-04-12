@@ -9,28 +9,37 @@ export default new Router({
   linkActiveClass: 'active',
   routes: [
     {
+      path: '/home',
+      name: 'home',
+      alias:'/',
+      component: () => import('./views/Home.vue'),
+      children:[
+        {
+          path: '',
+          redirect:'/content'
+        },
+        {
+          path:'content',
+          component:() => import('./views/Content.vue')
+        },
+        {
+          path:'dashboard',
+          component:() => import('./views/Dashboard.vue')
+        },
+        {
+          path:'datapre',
+          component:() => import('./views/Datapre.vue')
+        }
+      ]
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('./views/Login.vue')
     },
     {
-      path: '/content',
-      name: 'content',
-      component: () => import('./views/Content.vue')
-    },
-    {
-      path: '/dashbord',
-      name: 'dashbord',
-      component: () => import('./views/Dashboard.vue')
-    },
-    {
-      path: '/datapre',
-      name: 'datapre',
-      component: () => import('./views/Datapre.vue')
-    },
-    {
       path:"*",
-      component:  () => import('./views/Content.vue')
+      redirect:'/home'
     }
   ]
 })

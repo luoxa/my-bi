@@ -2,7 +2,7 @@
   <nav class="my-silder-navbar">
       <ul class="my-nav">
           <router-link to="/content" tag="li"><i class="fa fa-th-list"></i>目录</router-link>
-          <router-link to="/dashbord" tag="li"><i class="fa fa-th-list"></i>仪表盘</router-link>
+          <router-link to="/dashboard" tag="li"><i class="fa fa-th-list"></i>仪表盘</router-link>
           <router-link to="/datapre" tag="li"><i class="fa fa-th-list"></i>数据准备</router-link>
       </ul>
 
@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: 'MySiderNavbar'
+    name: 'MySiderBar'
   }
 </script>
 
