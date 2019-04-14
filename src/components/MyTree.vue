@@ -21,11 +21,11 @@
             'list':Array,
             'left':{
                 type:Number,
-                default:16
+                default:10
             },
             'leftAdd':{
                 type:Number,
-                default:16
+                default:10
             }
         },
         data:function(){
@@ -33,7 +33,7 @@
         },
         methods:{
             select(item){
-              this.selectId= item.id
+              this.selectId = item.id==this.selectId&&item.children ? "":item.id;
 
               if(!item.children){
                 this.$store.commit('treeSelect',item.id)
@@ -67,6 +67,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 14px;
   }
   .my-tree li.select.notLeaf{
       height:auto;
