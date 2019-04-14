@@ -16,11 +16,21 @@ export default new Router({
       children:[
         {
           path: '',
-          redirect:'/content'
+          redirect:'/contents'
         },
         {
-          path:'content',
-          component:() => import('./views/Content.vue')
+          path:'contents',
+          component:() => import('./views/Contents.vue'),
+          children:[
+            {
+              path:'',
+              component:() => import('./views/Content.vue')
+            },
+            {
+              path:':id',
+              component:() => import('./views/Content.vue')
+            }
+          ]
         },
         {
           path:'dashboard',

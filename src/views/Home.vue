@@ -1,10 +1,10 @@
 <template>
     <div>
         <!-- 顶部导航 -->
-        <MyHeader></MyHeader>
+        <my-header></my-header>
 
         <!-- 左侧导航 -->
-        <MySiderBar></MySiderBar>
+        <my-sider-bar :list="list"></my-sider-bar>
 
         <section class="main">
             <router-view></router-view>
@@ -18,8 +18,17 @@
   export default {
     name: 'home',
     components:{
-      MyHeader:()=>import('../components/MyHeader.vue'),
-      MySiderBar:()=>import('../components/MySiderBar.vue')
+      'my-header':()=>import('../components/MyHeader.vue'),
+      'my-sider-bar':()=>import('../components/MySiderBar.vue')
+    },
+    data:function(){
+      return {
+        list:[
+          {to:'/contents',iconCls:'fa-th-list',text:'目录'},
+          {to:'/dashboard',iconCls:'fa-dashboard',text:'仪表盘'},
+          {to:'/datapre',iconCls:'fa-database',text:'数据准备'}
+        ]
+      }
     }
   }
 </script>

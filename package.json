@@ -13,6 +13,8 @@
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
+    "axios": "^0.18.0",
+    "vue-axios ": "^2.1.4",
     "echarts": "^4.2.0-rc.2",
     "echarts-liquidfill": "^2.0.4",
     "font-awesome": "^4.7.0",

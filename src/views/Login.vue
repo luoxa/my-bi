@@ -26,6 +26,7 @@
 <script>
 
     export default {
+        name:'login',
         data:function(){
             return {
                 username:'demo',
@@ -38,17 +39,17 @@
 </script>
 
 <style scoped lang="less">
-*{box-sizing:border-box;}
-.login-container{width:100%;height:100%;position:fixed;left:0;top:0;z-index:99;display:flex;justify-content:center;align-items:center;}
-.login-container>img{width:100%;height:100%;}
-.login-box{width:720px;height:380px;position:absolute;background:#fff;box-shadow:0 10px 30px 0 rgba(0,63,163,.1);}
-.login-box-left{width:450px;height:100%;float:left;position:relative;}
-.login-box-right{width:270px;height:100%;float:right;position:relative;width:270px;height:100%;padding:0 40px;}
-.login-box-left>img{width:100%;height:100%;}
-.login-box-left:after{content:"";display:block;position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(0,84,230,.7);}
-p.p1{margin:50px 0 10px;border-bottom:1px solid #aaa; white-space: nowrap;}
-p.p2{margin:40px 0 20px;text-align:left;}
-input{border:none!important;outline:none;}
-button{width:190px;height:40px;line-height:38px;text-align:center;margin:0px auto;background:#3685F2;border-radius:20px;overflow:hidden;border:none;outline:none;font-size:16px;color:#fff;}
-i{margin-right:6px;}
+    *{box-sizing:border-box;}
+    .login-container{width:100%;height:100%;position:fixed;left:0;top:0;z-index:99;display:flex;justify-content:center;align-items:center;}
+    .login-container>img{width:100%;height:100%;}
+    .login-box{width:720px;height:380px;position:absolute;background:#fff;box-shadow:0 10px 30px 0 rgba(0,63,163,.1);}
+    .login-box-left{width:450px;height:100%;float:left;position:relative;}
+    .login-box-right{width:270px;height:100%;float:right;position:relative;width:270px;height:100%;padding:0 40px;}
+    .login-box-left>img{width:100%;height:100%;}
+    .login-box-left:after{content:"";display:block;position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(0,84,230,.7);}
+    p.p1{margin:50px 0 10px;border-bottom:1px solid #aaa; white-space: nowrap;}
+    p.p2{margin:40px 0 20px;text-align:left;}
+    input{border:none!important;outline:none;}
+    button{width:190px;height:40px;line-height:38px;text-align:center;margin:0px auto;background:#3685F2;border-radius:20px;overflow:hidden;border:none;outline:none;font-size:16px;color:#fff;}
+    i{margin-right:6px;}
 </style>

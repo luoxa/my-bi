@@ -1,9 +1,7 @@
 <template>
   <nav class="my-silder-navbar">
       <ul class="my-nav">
-          <router-link to="/content" tag="li"><i class="fa fa-th-list"></i>目录</router-link>
-          <router-link to="/dashboard" tag="li"><i class="fa fa-dashboard"></i>仪表盘</router-link>
-          <router-link to="/datapre" tag="li"><i class="fa fa-database"></i>数据准备</router-link>
+          <router-link v-for="item in list" :to="item.to" tag="li"><i class="fa" :class="item.iconCls"></i>{{item.text}}</router-link>
       </ul>
 
       <ul class="my-tool">
@@ -14,7 +12,17 @@
 
 <script>
   export default {
-    name: 'MySiderBar'
+    name: 'my-sider-bar',
+    props:{
+      list:{
+        type:Array,
+        default:[
+          {to:'/contents',iconCls:'fa-th-list',text:'目录'},
+          {to:'/dashboard',iconCls:'fa-dashboard',text:'仪表盘'},
+          {to:'/datapre',iconCls:'fa-database',text:'数据准备'}
+        ]
+      }
+    }
   }
 </script>
 
