@@ -7,7 +7,9 @@
         <my-sider-bar :list="list"></my-sider-bar>
 
         <section class="main">
-            <router-view></router-view>
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
         </section>
 
     </div>

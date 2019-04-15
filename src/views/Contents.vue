@@ -1,6 +1,5 @@
 <template>
     <div>
-        <img src="../assets/img/content.png" style="width:100%;height:100%;position:absolute;z-index:-1;"/>
 
         <div class="area-left">
             <div style="position:absolute;left:0px;top:0px;right:0;height:60px;line-height:30px; padding: 16px 14px 0px;" >
@@ -14,21 +13,24 @@
             </div>
 
             <div style="position:absolute;left:0;top:60px;right:0px;bottom:0px;padding:0 10px;">
-                <my-tree v-if='activeIndex==0' :list="list" ></my-tree>
+                <!-- 动态显示区1 -->
+                <my-tree v-show='activeIndex==0' :list="list" ></my-tree>
 
-                <ul v-if="activeIndex==1" class="s-list">
+                <!-- 动态显示区2 -->
+                <ul v-show="activeIndex==1" class="s-list">
                     <li><i class="fa fa-file-text-o"></i>地产公司销售监控</li>
                     <li><i class="fa fa-file-text-o"></i>产品销售分析</li>
                 </ul>
 
-                <select v-if="activeIndex==2" style="width: 100%; background: transparent;">
+                <!-- 动态显示区3 -->
+                <select v-show="activeIndex==2" style="width: 100%; background: transparent;">
                     <option>请选择...</option>
                 </select>
             </div>
         </div>
         <div class="area-right">
-            <div style="position:absolute;top:0px;left:0;right:0px;height:30px;">
-
+            <div class="my-tabs" style="position:absolute;top:0px;left:0;right:0px;height:30px;background:#21304C;">
+                <div class="my-tab"><i class="fa fa-home"></i></div>
             </div>
 
             <div style="position:absolute;top:30px;left:0;right:0px;bottom:0px;">
@@ -127,5 +129,18 @@ ul.s-list>li {
 }
 ul.s-list>li>i{
     width:16px;
+}
+
+.my-tabs{
+    white-space:nowrap;
+    font-size:0px;
+}
+.my-tab {
+    height: 100%;
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 30px;
+    background:#223E65;
 }
 </style>
