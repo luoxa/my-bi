@@ -37,7 +37,7 @@
 
               if(!item.children){
                 this.$store.commit('treeSelect',item.id)
-                this.$router.push({path:`/contents/${item.id}`})
+                this.$router.push({path:`/home/contents/${item.id}`})
               }
             },
             isSelect(id){

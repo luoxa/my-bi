@@ -26,9 +26,9 @@
     data:function(){
       return {
         list:[
-          {to:'/contents',iconCls:'fa-th-list',text:'目录'},
-          {to:'/dashboard',iconCls:'fa-dashboard',text:'仪表盘'},
-          {to:'/datapre',iconCls:'fa-database',text:'数据准备'}
+          {to:'/home/contents',iconCls:'fa-th-list',text:'目录'},
+          {to:'/home/dashboard',iconCls:'fa-dashboard',text:'仪表盘'},
+          {to:'/home/datapre',iconCls:'fa-database',text:'数据准备'}
         ]
       }
     }
