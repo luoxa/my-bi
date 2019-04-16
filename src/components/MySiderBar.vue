@@ -1,7 +1,7 @@
 <template>
   <nav class="my-silder-navbar">
       <ul class="my-nav">
-          <router-link v-for="item in list" :to="item.to" tag="li"><i class="fa" :class="item.iconCls"></i>{{item.text}}</router-link>
+          <router-link v-for="(item,index) in list" :key="index" :to="item.to" tag="li"><i class="fa" :class="item.iconCls"></i>{{item.text}}</router-link>
       </ul>
 
       <ul class="my-tool">
@@ -16,11 +16,13 @@
     props:{
       list:{
         type:Array,
-        default:[
-          {to:'/contents',iconCls:'fa-th-list',text:'目录'},
-          {to:'/dashboard',iconCls:'fa-dashboard',text:'仪表盘'},
-          {to:'/datapre',iconCls:'fa-database',text:'数据准备'}
-        ]
+        default:function(){
+          return [
+            {to:'/contents',iconCls:'fa-th-list',text:'目录'},
+            {to:'/dashboard',iconCls:'fa-dashboard',text:'仪表盘'},
+            {to:'/datapre',iconCls:'fa-database',text:'数据准备'}
+          ]
+        }
       }
     }
   }
