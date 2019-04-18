@@ -104,18 +104,27 @@
 </script>
 
 <style scoped>
-    .my-table{
-        overflow: auto;
-        height: 100%;
-    }
-    .checkbox-col{
-        width:20px;
-    }
-    .my-icon {
-        font-size:14px;
-        margin:0 4px;
-    }
-    .fa-file-text-o{color:#13cd66;}
-    .fa-folder-open-o{color:#faaa39;}
-    .fa-send-o{color:#3685f2;}
+.my-table{
+    overflow: auto;
+    height: 100%;
+}
+.checkbox-col{
+    width:20px;
+}
+.my-icon {
+    font-size:14px;
+    margin:0 4px;
+}
+.fa-file-text-o{
+    color:#13cd66;
+}
+.fa-folder-open-o{
+    color:#faaa39;
+}
+.fa-send-o{
+    color:#3685f2;
+}
+table-toolbar{
+    line-height:40px;
+}
 </style>

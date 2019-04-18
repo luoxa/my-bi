@@ -36,5 +36,12 @@
 </script>
 
 <style scoped>
-.main{position:fixed;left:70px;top:40px;right:0px;bottom:0px;}
+.main{
+  position:fixed;
+  left:70px;
+  top:40px;
+  right:0px;
+  bottom:0px;
+  overflow: auto;
+}
 </style>
