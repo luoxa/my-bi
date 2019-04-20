@@ -14,7 +14,7 @@
 
             <div style="position:absolute;left:0;top:60px;right:0px;bottom:0px;padding:0 10px;">
                 <!-- 动态显示区1 -->
-                <my-tree v-show='activeIndex==0' :list="list" ></my-tree>
+                <my-tree v-show='activeIndex==0' :list="list" @onSelect="onSelect"></my-tree>
 
                 <!-- 动态显示区2 -->
                 <ul v-show="activeIndex==1" class="s-list">
@@ -30,7 +30,8 @@
         </div>
         <div class="area-right">
             <div class="my-tabs" style="position:absolute;top:0px;left:0;right:0px;height:30px;background:#21304C;">
-                <div class="my-tab"><i class="fa fa-home"></i></div>
+                <router-link tag="div" class="my-tab" to="/home/contents/" ><i class="fa fa-home"></i></router-link>
+                <router-link tag="div" class="my-tab" v-for="(item,index) in $store.state.treeSelectList" :key="index" :to="'/home/contents/'+item.id" > {{item.text}} </router-link>
             </div>
 
             <div style="position:absolute;top:30px;left:0;right:0px;bottom:0px;">
@@ -59,6 +60,9 @@
             }
         },
         methods:{
+            onSelect(node){
+                alert(node.name)
+            },
 
             listToTree(data,parentId){
                 var itemArr=[];
@@ -131,7 +135,7 @@ ul.s-list>li>i{
     width:16px;
 }
 
-.my-tabs{
+.my-tabs {
     white-space:nowrap;
     font-size:0px;
 }
@@ -139,8 +143,14 @@ ul.s-list>li>i{
     height: 100%;
     display: inline-block;
     padding: 0 16px;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 30px;
+    border-right:#333;
+}
+.my-tab>li {
+    font-size: 16px;
+}
+.my-tab.active {
     background:#223E65;
 }
 </style>

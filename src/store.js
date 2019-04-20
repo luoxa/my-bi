@@ -6,11 +6,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     activeIndex:0,
-    treeSelectId:null
+    treeSelectList:{}
   },
   mutations: {
-    treeSelect(state,selectId){
-        state.treeSelectId=selectId
+    treeSelect(state,payload){
+        state.treeSelectList[payload.id]=payload
     }
   },
   actions: {
