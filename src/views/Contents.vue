@@ -30,7 +30,7 @@
         </div>
         <div class="area-right">
             <div class="my-tabs" style="position:absolute;top:0px;left:0;right:0px;height:30px;background:#21304C;">
-                <router-link tag="div" class="my-tab" to="/home/contents/" ><i class="fa fa-home"></i></router-link>
+                <router-link tag="div" class="my-tab" to="/home/contents/index" ><i class="fa fa-home"></i></router-link>
                 <router-link tag="div" class="my-tab" v-for="(item,index) in $store.state.treeSelectList" :key="index" :to="'/home/contents/'+item.id" > {{item.text}} </router-link>
             </div>
 

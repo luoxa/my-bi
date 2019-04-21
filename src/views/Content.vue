@@ -8,7 +8,7 @@
         name:'content0',
         methods:{
             imgError(){
-                this.$el.src='/img/contents/home.png';
+                this.$el.src='/img/contents/index.png';
             }
         }
     }

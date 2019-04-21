@@ -22,7 +22,7 @@ export default new Router({
           children:[
             {
               path:'',
-              component:() => import('./views/Content.vue')
+              redirect:'/home/contents/index'
             },
             {
               path:':id',
